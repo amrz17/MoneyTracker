@@ -77,13 +77,59 @@ export default function HomeScreen() {
           </View>
         </View>
       </View>
-      <View style={styles.filterView}>
+      {/* <View style={styles.filterView}>
         <View style={{ flexDirection: 'row', gap: 6}}>
           <Ionicons name="filter" size={20} color="#131516" />
           <Text style={{ fontFamily: 'Inter', fontSize: 12, color: "#131516" }}>
             Filter & Sort
           </Text>
         </View>
+      </View> */}
+      <View style={styles.dataContainer}>
+        <View style={styles.titleData}>
+          <Text style={{ 
+            fontFamily: 'Inter-Semibold', 
+            fontSize: 14, 
+            color: '#131516', 
+            textAlign: 'center', 
+            backgroundColor: '#FBFBFB',
+            paddingVertical: 10,
+            width: 160,
+            borderRadius: 50
+          }}>
+            All Entries
+          </Text>
+          <Text style={{ 
+            fontFamily: 'Inter-Semibold', 
+            fontSize: 14, 
+            color: '#131516', 
+            textAlign: 'center', 
+            // backgroundColor: 'white',
+            paddingVertical: 10,
+            width: 160,
+            borderRadius: 50
+          }}>
+           By Person
+          </Text>
+        </View>
+        <Text style={{ 
+          fontFamily: 'Inter-Semibold', 
+          fontSize: 18, 
+          color: '#131516', 
+          textAlign: 'center', 
+          marginTop: 40
+        }}>
+          No Entries Found
+        </Text>
+        <Text style={{ 
+          fontFamily: 'Inter-Regular', 
+          fontSize: 12, 
+          color: 'gray', 
+          textAlign: 'center', 
+          marginTop: 20
+        }}>
+          Get started by adding your first debt or credit entry
+        </Text>
       </View>
     </View>
   );
@@ -123,7 +169,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     gap: 6,
-    marginTop: 6
+    marginVertical: 6
   },
   debtView: {
     height: 110,
@@ -163,5 +209,18 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     backgroundColor: '#F2F2F2',
     padding: 10,
-  }
+  },
+  dataContainer: {
+    flex: 1,
+    marginHorizontal: 16,
+    marginTop: 8,
+  },
+  titleData: {
+    flexDirection: 'row',
+    marginBottom: 8,
+    backgroundColor: '#E2E2E2',
+    padding: 6,
+    borderRadius: 50,
+    justifyContent: 'space-evenly',
+  },
 });
